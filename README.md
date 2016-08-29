@@ -4,6 +4,7 @@ First, mine the data. We use Tweepy to stream live Twitter data with certain has
 Then, we use Microsoft Emotion API to determine the emotion of the picture. We tweet based on the highest shown emotion. </br>
 We use Markovify to generate a (somewhat) realistic sentence using our source text files. Each word is selected based on how often it follows the previous word in the source. </br>
 Lastly, we use Tweepy to post the tweet and update the current mood at https://twitter.com/tweetMyMoodBot. </br>
+The Twitter account can be seen at https://twitter.com/tweetMyMoodBot. </br>
 
 ## Dependencies
 Microsoft Emotion API <br />
@@ -12,7 +13,7 @@ Markovify </br>
 
 
 ## How to run
-First, register your app and get your Twitter API keys from https://dev.twitter.com. Add these into a file named creds.py. This program WILL NOT WORK unless you add your API keys. </br>
+First, register your app and get your Twitter API keys from https://dev.twitter.com. Also update 'Ocp-Apim-Subscription-Key' in main.py by registering at https://www.microsoft.com/cognitive-services/en-us/face-api.  Add these into a file named creds.py. This program WILL NOT WORK unless you add your API keys. </br>
 
 You can choose to mine your own data for the emotion files by running getdata.py, or you can use the data from the file named "data".
 First, install the required packages. </br>
@@ -36,4 +37,5 @@ python main.py 'https://www.yourLinkToAPhoto.com'
 
 ## Future improvements
 The tweet data was taken from a live Twitter stream based on hashtags of the desired emotion. I'd like to do build a classifier by using an annotated corpus. Classifcation could be done using a Maximum Entropy
-Classifier.
+Classifier. </br>
+I would also like to host the script so that it automatically runs every hour or so, to keep the bot consistent. This would have to be done by randomly choosing a face image as input, though. 
