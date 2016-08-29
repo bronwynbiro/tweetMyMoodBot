@@ -33,7 +33,7 @@ def main():
 
     headers = {
         'Content-Type': 'application/json',
-        'Ocp-Apim-Subscription-Key': 'bc5d8b32ff754da895daa0043add9f8c',
+        'Ocp-Apim-Subscription-Key': 'xxxx',
     }
 
     try:
